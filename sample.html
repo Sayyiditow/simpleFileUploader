@@ -1,0 +1,29 @@
+<html lang="eng">
+<head>
+    <link href="static/css/simpleFileUploader.css" rel="stylesheet">
+    <title>Simple File Uploader</title></head>
+<body>
+<div>
+    <br><br>
+    <label for='file' class="file-label text-center cursor-pointer">
+        Click/Drag and Drop to Upload Image(s) - <span
+            class="text-smaller">Up to 4, < 500KB each *</span>
+    </label>
+    <input type="file" name="file" multiple accept="image/*" id="file" required
+           class="simple-file-uploader">
+    <div id="filePreviewer" class="display-none">
+        <ul id="previewList" class="text-center"></ul>
+    </div>
+    <p class="text-center dark-red-text text-smaller display-none" id="fileUploadErrors"></p>
+</div>
+<!--Must be imported before initialization-->
+<script src="static/js/simpleFileUploader.js"></script>
+<script>
+    simpleFileUploader('file', {
+        maxFileSize: 500,
+        fileType: "image",
+        maxFileCount: 4
+    });
+</script>
+</body>
+</html>

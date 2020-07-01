@@ -8,10 +8,10 @@ DISLAIMER: Uses the DataTransfer object and will not work on ios Safari.
 Dead simple initialization;-
 
 Improt the css styles (available in dist directory):
-<link href="/static/css/simpleFileUploader.min.css" rel="stylesheet">
+`<link href="/static/css/simpleFileUploader.min.css" rel="stylesheet">`
 
 Set up  the HTML file input
-<div>
+```<div>
     <label for='file' class="file-label" style="text-align: center;cursor: pointer;">
         Click/Drag and Drop to Upload Image(s) - <span
             style="font-size: smaller;">Up to 4, < 500KB each *</span>
@@ -23,9 +23,11 @@ Set up  the HTML file input
     </div>
     <p class="text-center dark-red-text text-smaller display-none" id="fileUploadErrors"></p>
 </div>
+```
   
 Import simpleFileUploader.min.js and initialize:
 <!--Must be imported before initialization-->
+```
 <script src="/static/js/simpleFileUploader.min.js"></script>
 <script>
     simpleFileUploader('file', {
@@ -34,6 +36,7 @@ Import simpleFileUploader.min.js and initialize:
         maxFileCount: 4
     });
 </script>
+```
 
 There are 4 variables required:
 1. The id of the input in this case - 'file'.
